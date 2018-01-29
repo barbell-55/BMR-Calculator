@@ -13,8 +13,6 @@ body {
 
 }
 
-
-
 label {
 	display: block;
 }
@@ -39,10 +37,8 @@ button {
 	margin: 5px;
 }
 
-
-
-
 .center_div{
     margin: 0 auto;
     width:20% /* value of your choice which suits your alignment */
 }
+

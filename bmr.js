@@ -4,7 +4,7 @@ var weight = document.querySelector('input[name="weight"]').value;
 var activityLevel = document.querySelector('select[name="level"]').value;
 var calculate = document.querySelector('#calculate');
 var reset = document.querySelector('#reset');
-var dailyBMI = document.querySelector('#bmi');
+var daily = document.querySelector('#daily');
 var gender = document.querySelector('select[name="gender"]').value;
 
 
@@ -21,7 +21,7 @@ function bmrMen(w,h,a){
 	return bmr;
 }
 
-function dailyActivity(bmr,level){
+function calories(bmr,level){
 	if (level==0){
 		return bmr*1.375;
 	}
@@ -51,22 +51,24 @@ calculate.addEventListener("click", function(){
 	
 	if (gender==0){
 		var bmr = bmrMen(weight,height,age);
-		var activity = Math.round(dailyActivity(bmr,activityLevel));
-		dailyBMI.textContent = "Your BMI is: " + activity;
+		var activity = Math.round(calories(bmr,activityLevel));
+		daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight"
 
 		
 	}
 
 	else if (gender==1){
 		var bmr = bmrWomen(weight,height,age);
-		var activity = Math.round(dailyActivity(bmr,activityLevel));
+		var activity = Math.round(calories(bmr,activityLevel));
 		
 		if (height<64){
-			dailyBMI.textContent = "Your BMI is: " + activity + " and ur a Pokemon fam lmao";
+			daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight" + " and ur a pokemon fam lmao"
+
 
 		}
 		else {
-			dailyBMI.textContent = "Your BMI is: " + activity;
+			daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight"
+
 		}
 		
 
