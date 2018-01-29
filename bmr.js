@@ -82,7 +82,7 @@ reset.addEventListener("click", function(){
 	weight = document.querySelector('input[name="weight"]').value="";
 	activityLevel = document.querySelector('select[name="level"]').selectedIndex=0;
 	gender = document.querySelector('select[name="gender"]').selectedIndex = 0; //1 = option 2
-	dailyBMI.textContent = "";
+	daily.textContent = "";
 
 
 });
