@@ -50,7 +50,7 @@ calculate.addEventListener("click", function(){
 	console.log(gender);
 	
 	if (gender==0){
-		var bmr = bmrMen(weight,height,age);
+		var bmr = Math.round(bmrMen(weight,height,age));
 		var activity = Math.round(calories(bmr,activityLevel));
 		daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight"
 
@@ -58,7 +58,7 @@ calculate.addEventListener("click", function(){
 	}
 
 	else if (gender==1){
-		var bmr = bmrWomen(weight,height,age);
+		var bmr = Math.round(bmrWomen(weight,height,age));
 		var activity = Math.round(calories(bmr,activityLevel));
 		
 		if (height<64){
