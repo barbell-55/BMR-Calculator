@@ -40,7 +40,7 @@ function calories(bmr,level){
 }
 
 calculate.addEventListener("click", function(){
-	
+
 	age = document.querySelector('input[name="age"]').value;
 	height = document.querySelector('input[name="height"]').value;
 	weight = document.querySelector('input[name="weight"]').value;
@@ -48,19 +48,19 @@ calculate.addEventListener("click", function(){
 	console.log
 	gender = document.querySelector('select[name="gender"]').value;
 	console.log(gender);
-	
+
 	if (gender==0){
 		var bmr = Math.round(bmrMen(weight,height,age));
 		var activity = Math.round(calories(bmr,activityLevel));
 		daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight"
 
-		
+
 	}
 
 	else if (gender==1){
 		var bmr = Math.round(bmrWomen(weight,height,age));
 		var activity = Math.round(calories(bmr,activityLevel));
-		
+
 		if (height<64){
 			daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight" + " and ur a pokemon fam lmao"
 
@@ -70,7 +70,7 @@ calculate.addEventListener("click", function(){
 			daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight"
 
 		}
-		
+
 
 	}
 }
@@ -86,4 +86,3 @@ reset.addEventListener("click", function(){
 
 
 });
-
