@@ -60,19 +60,8 @@ calculate.addEventListener("click", function(){
 	else if (gender==1){
 		var bmr = Math.round(bmrWomen(weight,height,age));
 		var activity = Math.round(calories(bmr,activityLevel));
-
-		if (height<64){
-			daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight" + " and ur a pokemon fam lmao"
-
-
+		daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight"
 		}
-		else {
-			daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight"
-
-		}
-
-
-	}
 }
 );
 
