@@ -61,7 +61,7 @@ calculate.addEventListener("click", function(){
 		var bmr = Math.round(bmrWomen(weight,height,age));
 		var activity = Math.round(calories(bmr,activityLevel));
 		daily.textContent = "Your BMI is " + bmr + " and you must consume " + activity + " calories to maintain your current weight"
-		}
+	}
 }
 );
 
